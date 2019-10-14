@@ -1,0 +1,16 @@
+## Interface: 11302
+## Version: v201210250038
+## Title: TooltipOnMouse
+#@debug@
+# ## Title: |cffff0088EBG|r TooltipOnMouse
+#@end-debug@
+## Notes: Use the Interface/AddOns frame or "/ttom help" for a list of slash commands.
+## Author: egingell
+## SavedVariables: TooltipOnMouse
+## X-Curse-Packaged-Version: v201210250038
+## X-Curse-Project-Name: TooltipOnMouse
+## X-Curse-Project-ID: tooltiponmouse
+## X-Curse-Repository-ID: wow/tooltiponmouse/mainline
+
+TooltipOnMouse.lua
+TooltipOnMouseConfig.xml

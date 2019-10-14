@@ -1,0 +1,122 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
+	<Frame hidden="true" name="TooltipOnMouseConfig">
+		<Scripts>
+			<OnLoad>
+				self.name = "Tooltip On Mouse"
+				InterfaceOptions_AddCategory(self)
+			</OnLoad>
+			<OnShow function="TooltipOnMouseConfig_OnLoad" />
+		</Scripts>
+		<Layers>
+			<Layer>
+				<FontString inherits="SystemFont_Large" name="$parentHeader" text="Tooltip On Mouse">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="50" y="-10" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="ChatFontNormal" enableMouse="true" name="$parentOffsets" text="Current Offsets:">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="5" y="-60" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="SystemFont_Large" enableMouse="true" name="$parentFeatures" text="Features">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="50" y="-90" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="ChatFontNormal" enableMouse="true" name="$parentFeature1" text="">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="5" y="-115" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="ChatFontNormal" enableMouse="true" name="$parentFeature2" text="">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="5" y="-140" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="ChatFontNormal" enableMouse="true" name="$parentFeature3" text="">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="5" y="-165" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="ChatFontNormal" enableMouse="true" name="$parentFeature4" text="">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="5" y="-190" />
+					</Anchors>
+				</FontString>
+				<FontString inherits="ChatFontNormal" enableMouse="true" name="$parentFeature5" text="">
+					<Anchors>
+						<Anchor point="TOPLEFT" x="5" y="-215" />
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<!-- Make these EditBoxes and CheckButtons (easy) lock somehow. Maybe have them change back to previous values OnTextChanged? -->
+			<EditBox autoFocus="false" inherits="InputBoxTemplate" name="$parentOffsetX" text="">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentOffsets" x="10" y="0" />
+				</Anchors>
+				<Size x="75" y="20" />
+				<Scripts>
+					<OnEnterPressed function="EditBox_ClearFocus" />
+					<OnEscapePressed function="EditBox_ClearFocus" />
+					<OnTextChanged function="TooltipOnMouseConfig_OnTextChanged" />
+				</Scripts>
+			</EditBox>
+			<EditBox autoFocus="false" inherits="InputBoxTemplate" name="$parentOffsetY" text="">
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentOffsetX" x="10" y="0" />
+				</Anchors>
+				<Size x="75" y="20" />
+				<Scripts>
+					<OnEnterPressed function="EditBox_ClearFocus" />
+					<OnEscapePressed function="EditBox_ClearFocus" />
+					<OnTextChanged function="TooltipOnMouseConfig_OnTextChanged" />
+				</Scripts>
+			</EditBox>
+			<CheckButton inherits="UICheckButtonTemplate" name="$parentFeature1Checked">
+				<Scripts>
+					<OnClick function="TooltipOnMouseConfig_OnClick" />
+				</Scripts>
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentFeature1"  x="10" y="0" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton inherits="UICheckButtonTemplate" name="$parentFeature2Checked">
+				<Scripts>
+					<OnClick function="TooltipOnMouseConfig_OnClick" />
+				</Scripts>
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentFeature2" x="10" y="0" />
+				</Anchors>
+			</CheckButton>
+			<CheckButton inherits="UICheckButtonTemplate" name="$parentFeature3Checked">
+				<Scripts>
+					<OnClick function="TooltipOnMouseConfig_OnClick" />
+				</Scripts>
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentFeature3" x="10" y="0" />
+				</Anchors>
+			</CheckButton>
+			<Button inherits="UIPanelButtonTemplate" name="$parentFeature4Button">
+				<Scripts>
+					<OnClick function="TooltipOnMouseConfig_OnClick" />
+				</Scripts>
+				<Size x="50" y="20" />
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentFeature4" x="10" y="0" />
+				</Anchors>
+			</Button>
+			<Button inherits="UIPanelButtonTemplate" name="$parentFeature5Button">
+				<Scripts>
+					<OnClick function="TooltipOnMouseConfig_OnClick" />
+				</Scripts>
+				<Size x="50" y="20" />
+				<Anchors>
+					<Anchor point="LEFT" relativePoint="RIGHT" relativeTo="$parentFeature5" x="10" y="0" />
+				</Anchors>
+			</Button>
+		</Frames>
+	</Frame>
+</Ui>
